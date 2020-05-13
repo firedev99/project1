@@ -3,6 +3,7 @@ import React, {createContext, useReducer, useContext} from 'react'
 const GlobalStateContext = createContext()
 const GlobalDispatchContext = createContext()
 
+//reducer
 const globalReducer = (state, action) => {
     switch(action.type) {
         case "TOGGLE_THEME": {
@@ -23,10 +24,12 @@ const globalReducer = (state, action) => {
     }
 }
 
+//Provider
 export const GlobalProvider = ({children}) => {
     const [state, dispatch] = useReducer(globalReducer, {
         currentTheme: window.localStorage.getItem("theme") === null ? "dark" : window.localStorage.getItem("theme"),
-        cursorType: false, cursorStyles: ["pointer", "hovered", "nav-open"]
+        cursorType: false, 
+        cursorStyles: ["pointer", "hovered", "nav-open"]
     })
     return (
         <GlobalDispatchContext.Provider value={dispatch}>

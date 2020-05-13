@@ -36,6 +36,7 @@ const Layout = ({ children }) => {
       background: ${props => props.theme.background};
       scroll-behavior: none;
       overflow-x: none;
+      transition: all 0.4s ease-in-out;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     }
     @font-face {
