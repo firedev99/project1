@@ -38,8 +38,9 @@ const Header = ({onCursor, toggleMenu, setToggleMenu}) => {
                             <Link>
                                 FASHI
                             </Link>
-                            <span 
+                            <span
                                 onClick={toggleTheme}
+                                onKeyPress={toggleTheme}
                                 onMouseEnter={() => onCursor("pointer")}
                                 onMouseLeave={() => onCursor("hovered")}
                             >
